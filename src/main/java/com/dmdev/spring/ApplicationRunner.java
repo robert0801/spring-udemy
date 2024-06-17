@@ -1,11 +1,8 @@
 package com.dmdev.spring;
 
 import com.dmdev.spring.database.pool.ConnectionPool;
-import com.dmdev.spring.database.repository.CompanyRepository;
 import com.dmdev.spring.database.repository.CrudRepository;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.util.stream.Stream;
 
 public class ApplicationRunner {
 
