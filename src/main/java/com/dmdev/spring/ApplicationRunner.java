@@ -15,4 +15,8 @@ public class ApplicationRunner {
             System.out.println(companyRepository.findById(1));
         }
     }
+
+    public void helloWorld() {
+        System.out.println("Hello World");
+    }
 }
