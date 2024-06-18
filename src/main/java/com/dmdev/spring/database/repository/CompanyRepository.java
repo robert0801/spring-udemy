@@ -5,6 +5,7 @@ import com.dmdev.spring.bpp.Transaction;
 import com.dmdev.spring.database.entity.Company;
 import com.dmdev.spring.database.pool.ConnectionPool;
 import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
@@ -20,7 +21,7 @@ public class CompanyRepository implements CrudRepository<Integer, Company> {
     private final List<ConnectionPool> pools;
     private final Integer poolSize;
 
-    public CompanyRepository(ConnectionPool connectionPool,
+    public CompanyRepository(@Qualifier(value = "pool2") ConnectionPool connectionPool,
                              List<ConnectionPool> pools,
                              @Value("${db.pool.size}") Integer poolSize) {
         this.connectionPool = connectionPool;
